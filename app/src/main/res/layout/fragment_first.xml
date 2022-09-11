@@ -7,8 +7,13 @@
 
 
     <TextView
+        android:id="@+id/tv_first_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#D5009688"
+        android:text="@string/texto_do_primeiro_fragmento"
+        android:textAlignment="center"
+        android:textSize="26sp" />
+
 
 </FrameLayout>
