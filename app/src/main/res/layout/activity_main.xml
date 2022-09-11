@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="Mensagem" />
+            android:hint="@string/mensagem" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Enviar"
+        android:text="@string/enviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,5 +45,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_enviar" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_enviar"
+        tools:ignore="HardcodedText" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="409dp"
+        android:layout_height="681dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="209dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
