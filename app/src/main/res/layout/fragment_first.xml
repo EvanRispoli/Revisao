@@ -6,12 +6,13 @@
     tools:context=".FirstFragment">
 
 
+    <!--suppress AndroidDomInspection -->
     <TextView
         android:id="@+id/tv_first_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#D5009688"
-        android:text="@string/texto_do_primeiro_fragmento"
+        android:text="@string/First fragment Text"
         android:textAlignment="center"
         android:textSize="26sp" />
 
