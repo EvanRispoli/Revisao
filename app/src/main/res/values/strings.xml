@@ -3,4 +3,8 @@
     <string name="mensagem">Mensagem</string>
     <string name="enviar">Enviar</string>
     <string name="esperando_resposta">Esperando Resposta</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="texto_do_primeiro_fragmento">TEXTO DO PRIMEIRO FRAGMENTO</string>
+    <string name="texto_do_segundo_fragmento" />
 </resources>
