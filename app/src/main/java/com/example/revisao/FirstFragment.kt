@@ -1,10 +1,11 @@
 package com.example.revisao
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.revisao.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
@@ -21,6 +22,12 @@ class FirstFragment : Fragment() {
     ): View {
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        binding.btnNext.setOnClickListener {
+            view.findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+        }
+
+
         return view
     }
 
