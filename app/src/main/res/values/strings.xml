@@ -7,4 +7,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="texto_do_primeiro_fragmento">TEXTO DO PRIMEIRO FRAGMENTO</string>
     <string name="texto_do_segundo_fragmento" />
+    <string name="fwd">FWD</string>
+    <string name="bck">BCK</string>
 </resources>
