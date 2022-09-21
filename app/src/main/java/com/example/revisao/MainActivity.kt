@@ -3,6 +3,7 @@ package com.example.revisao
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.revisao.databinding.ActivityMainBinding
@@ -18,7 +19,7 @@ https://developer.android.com/training/basics/intents/result#custom
 */
 
 class MainActivity : AppCompatActivity() {
-
+    val TAG = "Teste"
     /** Passo 001  -
      * Nome do arquivo de layout comecando com letras maiusculas e tirando o _ e acrescentando
      * "Binding" no final.
@@ -36,7 +37,20 @@ class MainActivity : AppCompatActivity() {
         setup()
     }
 
+    private fun setupFragmentListener(){
+        supportFragmentManager
+            .setFragmentResultListener("requestKey", this) { requestKey, bundle ->
+                // We use a String here, but any type that can be put in a Bundle is supported
+                val result = bundle.getString("bundleKey")
+                // Do something with the result
+                binding.tvResposta.text = result
+                Log.i(TAG, "Recebendo result: $result")
+            }
+
+    }
+
     private fun setup() {
+        setupFragmentListener()
         setupClickListeners()
     }
    /** Configura atividade de cliques*/
